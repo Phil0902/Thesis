@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmotiTunes - Your Emotion-Driven Music Experience</title>
+    {% load static %}
+     <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="logo">EmotiTunes</div>
+            <ul>
+                <li class="active"><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-search"></i> Search</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> Your Library</a></li>
+                <li><a href="#"><i class="fas fa-plus-square"></i> Create Playlist</a></li>
+                <li><a href="#"><i class="fas fa-heart"></i> Liked Songs</a></li>
+            </ul>
+            <div class="user-profile">
+                <img src="/placeholder.svg?height=40&width=40" alt="User Avatar">
+                <span>User Name</span>
+            </div>
+        </nav>
+
+        <main class="content">
+            <header>
+                <div class="header-controls">
+                    <button class="nav-button"><i class="fas fa-chevron-left"></i></button>
+                    <button class="nav-button"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="user-controls">
+                    <button class="upgrade-button">Upgrade</button>
+                    <div class="user-menu">
+                        <img src="/placeholder.svg?height=30&width=30" alt="User Avatar">
+                        <span>User Name</span>
+                        <i class="fas fa-caret-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <section class="emotion-analyzer">
+                <h2>How are you feeling today?</h2>
+                <div class="camera-container">
+                    <video id="camera-feed" autoplay></video>
+                    <button id="capture-emotion">Analyze Mood</button>
+                </div>
+                <div id="emotion-result" class="hidden">
+                    <p>You seem to be feeling: <span id="detected-emotion"></span></p>
+                    <p>Here's a playlist to match your mood:</p>
+                </div>
+            </section>
+
+            <section class="mood-playlists">
+                <h2>Mood-Based Playlists</h2>
+                <div class="playlist-grid">
+                    <div class="playlist-card">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Happy Vibes">
+                        <h3>Happy Vibes</h3>
+                        <p>Upbeat tunes to keep you smiling</p>
+                    </div>
+                    <div class="playlist-card">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Chill Mode">
+                        <h3>Chill Mode</h3>
+                        <p>Relaxing melodies for your downtime</p>
+                    </div>
+                    <div class="playlist-card">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Energy Boost">
+                        <h3>Energy Boost</h3>
+                        <p>Get pumped with these high-energy tracks</p>
+                    </div>
+                    <div class="playlist-card">
+                        <img src="/placeholder.svg?height=150&width=150" alt="Melancholy Moments">
+                        <h3>Melancholy Moments</h3>
+                        <p>Embrace your feelings with these emotional tunes</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recently-played">
+                <h2>Recently Played</h2>
+                <div class="track-list">
+                    <div class="track-item">
+                        <img src="/placeholder.svg?height=50&width=50" alt="Track 1">
+                        <div class="track-info">
+                            <h4>Track Name 1</h4>
+                            <p>Artist Name</p>
+                        </div>
+                        <span class="track-duration">3:45</span>
+                    </div>
+                    <div class="track-item">
+                        <img src="/placeholder.svg?height=50&width=50" alt="Track 2">
+                        <div class="track-info">
+                            <h4>Track Name 2</h4>
+                            <p>Artist Name</p>
+                        </div>
+                        <span class="track-duration">4:20</span>
+                    </div>
+                    <div class="track-item">
+                        <img src="/placeholder.svg?height=50&width=50" alt="Track 3">
+                        <div class="track-info">
+                            <h4>Track Name 3</h4>
+                            <p>Artist Name</p>
+                        </div>
+                        <span class="track-duration">3:30</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="player">
+            <div class="now-playing">
+                <img src="/placeholder.svg?height=60&width=60" alt="Now Playing">
+                <div class="track-info">
+                    <h4>Current Track Name</h4>
+                    <p>Current Artist</p>
+                </div>
+                <button class="like-button"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="player-controls">
+                <button><i class="fas fa-random"></i></button>
+                <button><i class="fas fa-step-backward"></i></button>
+                <button class="play-pause"><i class="fas fa-play"></i></button>
+                <button><i class="fas fa-step-forward"></i></button>
+                <button><i class="fas fa-redo"></i></button>
+            </div>
+            <div class="volume-control">
+                <i class="fas fa-volume-up"></i>
+                <input type="range" min="0" max="100" value="50" class="volume-slider">
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+
+ 
+ 
