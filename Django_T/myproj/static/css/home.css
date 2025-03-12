@@ -384,6 +384,34 @@
     cursor: pointer;
     border-radius: 50%;
   }
+
+  /* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+}
+
+/* Button Styles */
+button {
+    padding: 0.5rem 1rem;
+    background-color: #1db954;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1aa34a;
+}
+
   
   /* Responsive Design */
   @media (max-width: 1024px) {
